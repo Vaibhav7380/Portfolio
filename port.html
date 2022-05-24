@@ -1,0 +1,289 @@
+<html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="CSS/style.css">
+
+
+</head>
+<body>
+    <div class="cursor-1"></div>
+    <div class="cursor-2"></div>
+    <div id="menu-bars" class="fas fa-bars"></div>
+
+<header>
+    <a href="a" class="logo"><span>Arijit</span>Singh</a>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#home">About</a>
+        <a href="#home">Service</a>
+        <a href="#experience">Experience</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="follow">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+    </div>
+</header>
+
+<section class="home" id="home">
+    <div class="content">
+        <span class="hi">hi there...</span>
+        <h3>i am<span>  arijit singh</span></h3>
+        <p class="info">i am a singer</p>
+        <p class="text">Arijit Singh (born 25 April 1987) is an Indian singer and music composer. He sings predominantly in Hindi and Bengali, 
+            but has also performed in various other Indian languages.[7][8] He is the recipient of a National Award and six Filmfare Awards.</p>
+        <a href="#about" class="btn">About me</a>
+    </div>
+
+    <div class="image">
+        <img src="Images/aa.jpg" alt="">
+    </div>
+<script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+//style.css
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --main-color:#e38528
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0; padding:0;
+    box-sizing:border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-decoration: capitalize;
+    transition: all .2s linear;
+    line-height: 1.5;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    background: #fcf2e8;
+    padding-left: 30rem;
+}
+section{
+    padding:1rem 5%;
+    min-height: 100vh;
+}
+header{
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    flex-flow: column;
+    padding: 8rem 2rem;
+    width: 30rem;
+    text-align: center;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3em;
+    background: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background: #111;
+    letter-spacing: .2rem;
+}
+header .logo{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+header .logo span{
+    text-transform: uppercase;
+    color:var(--main-color);
+}
+header .navbar a{
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    margin: 2rem 0;
+}
+header .navbar a:hover{
+    letter-spacing: .2rem;
+    color:var(--main-color);
+}
+header .follow a{
+    font-size: 2.5rem;
+    color: #fff;
+    margin: 0 .7rem;
+}
+header .follow a:hover{
+    color: var(--main-color);
+}
+#menu-bars{
+    position: fixed;
+    top: 1rem; right: 1rem;
+    z-index: 10000;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: .5rem;
+    padding: 1rem 1.5rem;
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+}
+.cursor-1{
+    position: absolute;
+    top: 0; left: 0;
+    height: 1rem; width: 1rem;
+    background: var(--main-color);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 10000;
+}
+.cursor-1.active{
+    height: 7rem;
+    width:7rem;
+    opacity: .3;
+}
+.cursor-2{
+    position: absolute;
+    top: 0; left: 0;
+    height: 4rem; width: 4rem;
+    border: .1rem solid var(--main-color);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 10000;
+    transition: .3s linear;
+}
+.cursor-2.active{
+    display: none;
+}
+.home{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.home .image{
+    flex: 1 1 35rem;
+}
+.home .image img{
+    width: 90%;
+}
+.home .content{
+    flex: 1 1 30rem;
+}
+.home .content .hi{
+    font-size: 3rem;
+    color: var(--main-color);
+}
+.home .content h3{
+    font-size: 4.5rem;
+    color: #111;
+    text-transform: uppercase;
+}
+.home .content h3 span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+.home .content .info{
+    font-size:2.5rem;
+    color: #111;
+    padding:1rem 0;
+}
+.home .content .text{
+    font-size:1.7rem;
+    color: #666;
+    padding:5rem 0;
+}
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    body{
+        padding:0;
+    }
+    #menu-bars{
+        display: initial;
+    }
+    header{
+        left: -120%;
+    }
+    header.active{
+        left: 0%;
+    }
+    .cursor-1,
+    .cursor-2{
+        display: none;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+    header{
+        width: 100%;
+    }
+}
+
+//script.js
+
+let menu= document.querySelector('#menu-bars');
+let header= document.querySelector('header');
+
+menu.onclick=()=>{
+    menu.classList.toggle('fa-times');
+    header.classList.toggle('active');
+}
+
+window.onscroll=()=>{
+    menu.classList.remove('fa-times');
+    header.classList.remove('active');
+}
+
+let cursor1=document.querySelector(".cursor-1");
+let cursor2=document.querySelector(".cursor-2");
+
+window.onmousemove=(e)=>{
+    cursor1.style.top=e.pageY+'px';
+    cursor1.style.left=e.pageX+'px';
+    cursor2.style.top=e.pageY+'px';
+    cursor2.style.left=e.pageX+'px';
+}
+
+let links=document.querySelectorAll('a').forEach(links =>{
+
+    links.onmouseenter=()=>{
+        cursor1.classList.add('active');
+        cursor2.classList.add('active');
+    }
+
+    links.onmouseleave=()=>{
+        cursor1.classList.remove('active');
+        cursor2.classList.remove('active');
+    }
+});
